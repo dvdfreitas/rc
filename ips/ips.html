@@ -1,0 +1,31 @@
+<html>
+    <head>
+        <title>Página de IPs</title>
+        <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+    </head>
+    <body>
+        <div class="mt-16 border rounded shadow p-4 m-auto w-1/2">
+            <p class="text-3xl">Número ip</p>
+            <input id="ip" class="m-4 text-3xl p-2 w-1/2 h-16 border" type="text">
+            <button class="m-4 p-4 border" onclick="converte()">Calcular</button>
+        </div>
+        <div>
+            <input id="resultado" class="m-4 text-3xl p-2 w-1/2 h-16 border" type="text">
+        </div>
+
+        <script>
+            function converte() {
+                var ip = parseInt(document.getElementById("ip").value);
+                n = ip;
+                var resultado  = "";
+                while (n > 0) {
+                    var resto_div = n % 2; 
+                    var n = Math.floor(n / 2);                                        
+                    resultado = resto_div + resultado;
+                }
+                document.getElementById("resultado").value = resultado;
+            }
+
+        </script>
+    </body>
+</html>
