@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Exercício 4</title>
+        <script>
+            function ex4() {
+                var a = parseInt(document.getElementById("a").value);
+                var b = parseInt(document.getElementById("b").value);
+                var c = parseInt(document.getElementById("c").value);
+                
+                var raiz = Math.pow(b,2) - 4*a*c;
+                
+                if (raiz < 0)
+                    resultado = "Não tem soluções";
+                else if (raiz == 0) {
+                    var x = - b / (2 * a);
+                    resultado = "X = " + x;
+                } else {
+                    var x1 = (-b + Math.sqrt(raiz)) / (2 * a);
+                    var x2 = (-b - Math.sqrt(raiz)) / (2 * a);
+                    resultado = "X<sub>1</sub> = " + x1 + " e X<sub>2</sub> = " + x2;
+                } 
+                document.getElementById("resultado").innerHTML = resultado;
+            }
+        </script>
+    </head>
+    <body>
+        A <input type="number" id="a"><br>
+        B <input type="number" id="b"><br>
+        C <input type="number" id="c"><br>
+        <button onclick="ex4()">Calcular</button>
+        <div id="resultado"></div>
+    </body>
+</html>
