@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Exercício 5</title>
+        <script>
+            function ex5() {
+                var a = parseInt(document.getElementById("a").value);
+                var b = parseInt(document.getElementById("b").value);
+                var c = parseInt(document.getElementById("c").value);
+                var d = parseInt(document.getElementById("d").value);
+                var e = parseInt(document.getElementById("e").value);
+                var f = parseInt(document.getElementById("f").value);
+                var g = parseInt(document.getElementById("g").value);
+                var h = parseInt(document.getElementById("h").value);
+                var i = parseInt(document.getElementById("i").value);
+                var determinante = a*e*i+d*h*c+g*b*f-g*e*c-d*b*i-a*h*f;
+                document.getElementById("resultado").innerHTML = "O resultado é " + determinante;
+            }
+        </script>
+    </head>
+    <body>
+        <div>
+            <input type="text" value="0" id="a">
+            <input type="text" value="0" id="b">
+            <input type="text" value="0" id="c">
+        </div>
+        <div>
+            <input type="text" value="0" id="d">
+            <input type="text" value="0" id="e">
+            <input type="text" value="0" id="f">
+        </div>
+        <div>
+            <input type="text" value="0" id="g">
+            <input type="text" value="0" id="h">
+            <input type="text" value="0" id="i">
+        </div>
+        <button onclick="ex5()">Calcular</button>
+        <hr>
+        <div id="resultado"></div>
+        <hr>
+    </body>
+</html>
