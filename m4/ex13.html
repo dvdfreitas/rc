@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Exercício 13</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <script>
+        function ex13() {
+            max = parseInt(document.getElementById("maximo").value);
+            min = parseInt(document.getElementById("minimo").value);
+            
+            n_aleatorio = parseInt(document.getElementById("n_aleatorio").value);
+            for (i=0; i<n_aleatorio;i++) {
+                aleatorio = Math.floor(Math.random() * (max-min+1) + min);
+                document.getElementById('painel_aleatorios').innerHTML = document.getElementById('painel_aleatorios').innerHTML + aleatorio + "<br>";
+            }                
+        }
+    </script>
+</head>
+<body>
+    Total de aleatórios <input type="text" id="n_aleatorio">
+    Mínimo <input type="text" id="minimo">
+    Máximo <input type="text" id="maximo">
+    <br>
+    <div id="painel_aleatorios"></div>
+    <button onclick="ex13()">Calcular</button>
+</body>
+</html>
